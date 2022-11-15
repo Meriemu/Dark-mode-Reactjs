@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App" ref={refCircle} style={{ '--x': coord.X + 'px', '--y': coord.Y+'px' }}>
       <DarkMode />
+      <p className='madeWith'>Made with Reactjs (Context)</p>
     </div>
   );
 }
