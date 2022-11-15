@@ -1,0 +1,86 @@
+@import-normalize; /* bring in normalize.css styles */
+
+$tt_toggle: .4s;
+
+/* Light Color Scheme */
+:root,
+:root[data-force-color-mode="light"] {
+	color-scheme: light dark;
+	--text-color: #000;
+	// --background-color: #fff;
+	--link-color: #00f;
+}
+
+/* Dark Color Scheme */
+:root[data-force-color-mode="dark"] {
+	--text-color: #FFF;
+	 background-color: #333;
+	--link-color: #2196f3;
+
+	filter: drop-shadow(-1px 6px 3px rgba(255, 255, 255, 1));
+
+	.App {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+		// clip-path: circle(0px at var(--x, 0) var(--y, 0));
+		// transition: clip-path 0.1s cubic-bezier(0.52, 0.01, 0.16, 1);
+		cursor: pointer;
+	}
+}
+
+:root[data-force-color-mode="dark"] .App.moving {
+	// clip-path: circle(160px at var(--x, 0) var(--y, 0));
+	transition: clip-path 0.1s;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 578.6375122070312px;
+		width: 1536px;
+		min-height: 100vh;
+		min-width: 100vw;
+		pointer-events: none;
+		background: radial-gradient( circle at var(--x, 1116px) var(--y, 65px), rgb(255, 255, 0, 0.3), rgb(0, 0, 0, 1) 200px );
+		zoom: 1;
+	}
+}
+
+
+body {
+	position: relative;
+	height: 100%;
+	margin: 0;
+	color: var(--text-color);
+	transition: all .1s ease-in-out;
+}
+.App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// height: 100vh;
+	margin: auto;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 50vh;
+		margin: auto;
+	}
+
+}
+
+.toggleMode {
+	border: none;
+	background-color: transparent;
+	font-size: 50px;
+	cursor: pointer;
+}
