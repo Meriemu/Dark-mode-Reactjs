@@ -9,7 +9,6 @@ const DarkMode = () => {
 		return Math.floor(Math.random() * max);
 	}
 	useEffect(() => {
-
 		if (goDark) {
 				setPosition(prevState => ({ L: getRandomInt(100), R: getRandomInt(100) }))
 				console.log(getRandomInt(100))

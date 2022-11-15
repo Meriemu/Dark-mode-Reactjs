@@ -1,22 +1,17 @@
 @import-normalize; /* bring in normalize.css styles */
 
-$tt_toggle: .4s;
-
 /* Light Color Scheme */
 :root,
 :root[data-force-color-mode="light"] {
 	color-scheme: light dark;
-	--text-color: #000;
-	// --background-color: #fff;
+	--text-color: #333;
 	--link-color: #00f;
 }
 
 /* Dark Color Scheme */
 :root[data-force-color-mode="dark"] {
-	--text-color: #FFF;
-	 background-color: #333;
-	--link-color: #2196f3;
-
+	--text-color: #333;
+	--background-color: #333;
 	filter: drop-shadow(-1px 6px 3px rgba(255, 255, 255, 1));
 
 	.App {
@@ -52,7 +47,6 @@ $tt_toggle: .4s;
 	}
 }
 
-
 body {
 	position: relative;
 	height: 100%;
@@ -60,11 +54,11 @@ body {
 	color: var(--text-color);
 	transition: all .1s ease-in-out;
 }
+
 .App {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// height: 100vh;
 	margin: auto;
 
 	.container {
@@ -75,7 +69,6 @@ body {
 		height: 50vh;
 		margin: auto;
 	}
-
 }
 
 .toggleMode {
